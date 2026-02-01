@@ -7,11 +7,11 @@ No libraries are used.
 
 ### Features
 - Mostly binary compatible (i.e. should produce exactly the same outputs as the C version given the parameters and random seed)
-- Achieves around 75/27/13 tokens per second on my laptop for the 15/45/110M models, respectively.
+- Achieves around 80/35/23 tokens per second on my laptop for the 15/45/110M models, respectively.
 - Full 7B model is not loadable by this version bc the trick where we abuse the IPC serializer as the binary parser doesn't work with 26GB file. You're free to add chunked loading if you want ;)
 - Still likely the **shortest self-contained transformer inference** in the world.
-- ~5500 bytes, 76 lines of Q or 78 lines of K + <500 KB kdb
-- <70 lines and under 5KB if you are fine with deterministic sampling
+- ~5000 bytes, 69 lines of Q or 71 lines of K + <500 KB kdb
+- <60 lines and under 5KB if you are fine with deterministic sampling
 
 Includes the [TinyStories] 15M model. Tested with Kdb+ 4.0
 
